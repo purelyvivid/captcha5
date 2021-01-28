@@ -1,0 +1,10 @@
+version: "0"
+services:
+  app:
+    restart: always
+    build: .  # '点'代表当前目录
+    command: "python3 app.py"
+    volumes:
+      - .:/code
+    ports:
+      - "5005:5000"
